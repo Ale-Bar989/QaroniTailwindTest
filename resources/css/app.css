@@ -12,8 +12,9 @@
 
 @theme {
    
-    --color-primary-color: oklch(79.5% .184 86.047);
-    --color-secondary-color: oklch(98.7% 0.022 95.277);
+    /*test-red*/
+    --color-primary-color: oklch(57.7% .245 27.325);
+    --color-secondary-color: oklch(80.8% .114 19.571);
 
     --font-open-sans: "Open Sans", sans-serif;
 
