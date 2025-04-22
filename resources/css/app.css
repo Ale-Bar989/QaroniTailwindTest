@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+   
+    --color-primary-color: oklch(79.5% .184 86.047);
+    --color-secondary-color: oklch(98.7% 0.022 95.277);
+
+    --font-open-sans: "Open Sans", sans-serif;
+
+    --font-nunito: Nunito, sans-serif;
+    --font-monserrat: Monserrat, sans-serif;
+
+    --breakpoint-sm: 340px;
+    --breakpoint-md: 540px;
+    --breakpoint-lg: 768px;
+    --breakpoint-xl: 1180px;
+
+    --animate-movingY: move 3s linear infinite;
+    --animate-rotating: rotate 15s linear infinite;
+    --animate-scalingUp: scaleUp 3s linear infinite;
+
+    @keyframes move {
+        50% {
+            transform:  translateY(-1rem);
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform:  rotate(0deg);
+        }
+        
+        100% {
+            transform:  rotate(360deg);
+        }
+    }
+
+    @keyframes scaleUp {
+        0% {
+            transform:  scale(0.8);
+        }
+        
+        50% {
+            transform:  scale(1.2);
+        }
+
+        100% {
+            transform:  scale(0.8);
+        }
+    }
+}
+
+
+
+@utility container{
+
+
+    padding-inline: 12px;
+
+    @variant md {
+        padding-inline: 32px;
+    }
+
+}
+
+body {
+    @apply bg-[#f8f9fa] text-[#666666] font-nunito tracking-wider;
+}
+
+section {
+    @apply py-20 md:py-28;
+}
+
+h1 {
+    @apply text-3xl md:text-4xl xl:text-5xl font-bold;
+}
+
+h2 {
+    @apply text-2xl md:text-3xl xl:text-4xl;
+}
+
+h3 {
+    @apply text-xl md:text-2xl xl:text-3xl;
+}
+
+/* Header Section Styles */
+.nav-link {
+    @apply text-lg font-bold duration-300;
+}
+
+.nav-link:hover {
+    @apply text-primary-color;
+}
+
+/* Home Section Styles */
+.btn {
+    @apply border border-primary-color bg-primary-color text-secondary-color rounded-md px-5 py-2 duration-300 font-open-sans;
+}
+
+.btn span {
+    @apply font-bold;
+}
+
+.btn:hover {
+    @apply opacity-90;
+}
+
+.btn_outline {
+    @apply bg-transparent text-black;
+}
+
+.btn_outline:hover {
+    @apply bg-primary-color text-secondary-color;
+}
+
+/* About Us Section Styles */
+
+.title {
+    @apply font-nunito font-bold text-primary-color;
+}
